@@ -2,14 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def hexagon(x_center, y_center, size):
-    """Generate the coordinates of a hexagon centered at (x_center, y_center) with the given size."""
     angle = np.linspace(0, 2 * np.pi, 6, endpoint=False)
     x_hexagon = x_center + size * np.cos(angle)
     y_hexagon = y_center + size * np.sin(angle)
     return x_hexagon, y_hexagon
 
 def plot_hex_grid(rows, cols, size=1):
-    """Plot a grid of hexagons with the specified number of rows and columns."""
     plt.figure(figsize=(cols, rows))
     for row in range(rows):
         for col in range(cols):
